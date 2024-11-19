@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+ </head>
+ <body>
+  <header>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          {{message}}
+        {% endfor %}
+      {% endif%}
+    {% endwith %}
+  </header>
+  <main>
+  </main>
+  <footer>
+  <form action="http://127.0.0.1:5000/">
+    <div class="container">
+      <h1>Реєстрація</h1>
+      <p>Будь ласка заповніть форму для реєстрації аккаунту</p>
+      <hr>
+  
+      <label for="login"><b>Логін</b></label><br>
+      <input type="text" placeholder="Введіть логін"  name="login" required><br>
+  
+      <label for="psw"><b>Пароль</b></label><br>
+      <input type="password" placeholder="Введіть пароль" name="psw" required><br>
+  
+      <label for="psw-repeat"><b>Введіть пароль повторно</b></label><br>
+      <input type="password" placeholder="Введіть пароль ще раз" name="psw-repeat" required><br>
+      <hr>
+  
+      <button type="submit" class="registerbtn" href="http://127.0.0.1:5000/">Реєстрація</button>
+    </div>
+  
+    <div class="container signin">
+      <p>У вас вже є аккаунт? <a href="http://127.0.0.1:5000/sign_in">Увійти</a>.</p>
+    </div>
+  </form>
+  </footer>
+ </body>
+</html>

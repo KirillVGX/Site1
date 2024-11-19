@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block title -%}
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/sign.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    {% endblock %}
+</head>
+<body>
+    {% block button -%}
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <button type="submit" name="sign" class="registerbtn"><a href="{{url_for('sign_in')}}">Вхід</a></button>
+    <button type="submit" name='reg' class="registerbtn"><a href="{{url_for('register')}}">Реєстрація</a></button><br>
+    
+    <button type="submit" name='kiev' class="registerbtn"><a href="{{url_for('kiev')}}">Київ</a></button>
+    <button type="submit" name='odessa' class="registerbtn"><a href="{{url_for('odessa')}}">Одеса</a></button>
+    <button type="submit" name='harkiv' class="registerbtn"><a href="{{url_for('harkiv')}}">Харків</a></button>
+    <button type="submit" name='lviv' class="registerbtn"><a href="{{url_for('lviv')}}">Львів</a></button>
+    <button type="submit" name='zp' class="registerbtn"><a href="{{url_for('zp')}}">Запоріжжя</a></button>
+    <button type="submit" name='herson' class="registerbtn"><a href="{{url_for('herson')}}">Херсон</a></button>
+    <button type="submit" name='vinica' class="registerbtn"><a href="{{url_for('vinica')}}">Вінниця</a></button>
+    <button type="submit" name='iv-fr' class="registerbtn"><a href="{{url_for('Iv_Fr')}}">Івано-Франківськ</a></button>
+    <button type="submit" name='chernivci' class="registerbtn"><a href="{{url_for('chernivci')}}">Чернівці</a></button>
+    <button type="submit" name='mikolaiv' class="registerbtn"><a href="{{url_for('mikolaiv')}}">Миколаїв</a></button>
+    {% endblock %}
+</body>
+</html>
